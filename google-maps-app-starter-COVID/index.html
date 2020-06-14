@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google Maps Covid Situation</title>
+        <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div class="title">Covid-19 Situation Watch</div>
+        <div class="country-list-container">
+            <div class="search-container">  
+                <div class="menu-btn">
+                    <div class="menu-btn-burger">
+    
+                    </div>     
+                </div>
+                <div class="search">
+                    <input id="CountryRegion" type="text" placeholder="Enter Country Of Interest">
+                    <i class="fas fa-search" onclick="searchCountries()"></i>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="covid-label">
+                    <i class="fas fa-virus"></i>
+                </div>
+            </div>
+            <div class="toggle-menu">
+                <i class="fas fa-arrow-alt-circle-left"></i>
+            </div>
+        
+            <div class="country-list">
+                <div class="country-container">
+                    <div class="country-name">
+                        <i class="fas fa-globe"></i>
+                        <span>Country:Kenya-Date:2020-05-17</span>
+
+                    </div>
+                    <div class="country-confrimed-cases">
+                        <i class="fas fa-viruses"></i>
+                        <span>Confirmed cases 0</span>
+                        
+                    </div>
+                    <div class="country-recovered-cases">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Recovered cases 0</span>
+           
+                    </div>
+                    <div class="country-death-cases">
+                        <i class="fas fa-heart-broken"></i>
+                        <span>Death cases 0</span>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+        <!--This actually imports JavaScript File and The subject Datasets-->
+        <script src="js/index.js"></script>
+        <script src="js/covid-data.js"></script>
+        <!--This actually imports google map API-->
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA77te2BMMIdc8TmDsst6qkyOSgfSrfkqk&callback=initMap">
+        </script>
+    </body>
+</html>
